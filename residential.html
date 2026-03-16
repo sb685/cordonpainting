@@ -313,7 +313,7 @@
     </div>
     <div class="c-detail">
       <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><div class="c-label">Email</div><div class="c-val">sb@cordonpainting.com</div></div>
+      <div><div class="c-label">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="addecfedcec2dfc9c2c3ddccc4c3d9c4c3ca83cec2c0">[email&#160;protected]</a></div></div>
     </div>
     <div class="c-detail">
       <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -326,15 +326,18 @@
   </div>
   <div class="form-wrap">
     <div class="form-title">Request a Free Estimate</div>
-    <div class="form-row">
-      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"/></div>
-      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+    <form name="residential-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="residential-contact"/>
+      <p style="display:none;"><input name="bot-field"/></p>
+      <div class="form-row">
+      <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="Jane" required/></div>
+      <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith" required/></div>
     </div>
-    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@example.com"/></div>
-    <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(253) 000-0000"/></div>
+    <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@example.com" required/></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(253) 000-0000"/></div>
     <div class="form-group">
       <label>Service Needed</label>
-      <select>
+      <select name="service">
         <option value="">Select a service...</option>
         <option>Interior Painting</option>
         <option>Exterior Painting</option>
@@ -342,8 +345,9 @@
         <option>Other</option>
       </select>
     </div>
-    <div class="form-group"><label>Tell Us About Your Project</label><textarea placeholder="Square footage, number of rooms, timeline, any special requests..."></textarea></div>
-    <button class="form-submit">Send My Request →</button>
+    <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Square footage, number of rooms, timeline, any special requests..."></textarea></div>
+    <button type="submit" class="form-submit">Send My Request →</button>
+    </form>
   </div>
 </div>
 
@@ -352,11 +356,4 @@
   <div class="footer-logo">Cordon <span>Painting</span></div>
   <p class="footer-copy">© 2025 Cordon Painting · Licensed & Insured · Greater Puget Sound</p>
   <ul class="footer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</footer>
-
-</body>
-</html>
+    <li><a href="index.html">Home</a></li
