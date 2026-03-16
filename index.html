@@ -383,7 +383,7 @@ footer { background: #10171f; padding: 40px 60px; display: flex; align-items: ce
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
   </ul>
@@ -399,7 +399,7 @@ footer { background: #10171f; padding: 40px 60px; display: flex; align-items: ce
   <a href="#services" onclick="document.getElementById('navDrawer').classList.remove('open')">Services</a>
   <a href="about.html" onclick="document.getElementById('navDrawer').classList.remove('open')">About</a>
   <a href="#about" onclick="document.getElementById('navDrawer').classList.remove('open')">About</a>
-  <a href="gallery.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Gallery</a>
+  <a href="#gallery" onclick="document.getElementById('navDrawer').classList.remove('open')">Gallery</a>
   <a href="#testimonials" onclick="document.getElementById('navDrawer').classList.remove('open')">Reviews</a>
   <a href="#contact" onclick="document.getElementById('navDrawer').classList.remove('open')" style="color:var(--gold);">Get a Quote</a>
 </div>
@@ -451,17 +451,99 @@ footer { background: #10171f; padding: 40px 60px; display: flex; align-items: ce
       <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-5h4v5h4a1 1 0 001-1V10"/><line x1="12" y1="3" x2="12" y2="3"/><rect x="9" y="13" width="6" height="8"/></svg></div>
       <div class="service-name">Residential Painting</div>
       <p class="service-desc">Interior and exterior residential painting done right the first time. From single rooms to full home repaints — we handle walls, ceilings, trim, doors, and siding with clean prep, premium materials, and a flawless finish.</p>
-      <a href="residential.html" style="display:inline-block;margin-top:24px;background:var(--navy);color:var(--white);padding:12px 24px;border-radius:3px;font-size:0.85rem;font-weight:600;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s;" onmouseover="this.style.background='#2e3d52'" onmouseout="this.style.background='#1a2332'">Learn More →</a>
+      <div class="service-price">Free Estimates Available</div>
     </div>
     <div class="service-card">
       <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <div class="service-name">Multifamily &amp; Apartment Painting</div>
       <p class="service-desc">Serving property managers and building owners across the Puget Sound. We handle unit turns, common areas, and full building repaints.</p>
-      <a href="property-managers.html" style="display:inline-block;margin-top:24px;background:var(--navy);color:var(--white);padding:12px 24px;border-radius:3px;font-size:0.85rem;font-weight:600;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s;" onmouseover="this.style.background='#2e3d52'" onmouseout="this.style.background='#1a2332'">Learn More →</a>
+      <div class="service-price">Free Estimates Available</div>
     </div>
   </div>
 </section>
 
+
+<!-- PROPERTY MANAGERS -->
+<section id="property-managers" style="background: var(--navy); padding: 90px 60px;">
+  <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+    
+    <!-- Left: Content -->
+    <div>
+      <div class="section-tag">For Property Managers</div>
+      <h2 class="section-title" style="color: var(--white);">We Make Your Job <em style="font-style:italic; color:var(--gold);">Easier.</em></h2>
+      <p class="section-sub" style="color: rgba(255,255,255,0.55); margin-bottom: 40px;">Managing multifamily properties means tight timelines and high standards. Cordon Painting is built for that. We partner with property managers across the Greater Puget Sound to keep units move-in ready and buildings looking sharp — on time, every time.</p>
+      
+      <div style="display:flex; flex-direction:column; gap:20px; margin-bottom:40px;">
+        
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="width:44px;height:44px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Licensed, Bonded &amp; Fully Insured</div>
+            <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;">Protect your property and your tenants. We carry full liability coverage so you never have to worry.</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="width:44px;height:44px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Bulk &amp; Multi-Unit Discounts</div>
+            <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;">The more units, the better the rate. We offer competitive pricing for ongoing contracts and large-scale projects.</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="width:44px;height:44px;background:rgba(201,151,58,0.15);border:1px solid rgba(201,151,58,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--white);font-size:0.95rem;margin-bottom:4px;">Fast Turnaround Between Tenants</div>
+            <div style="font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.7;">Vacant unit? We move fast. Our crews are experienced in getting units painted and ready for new tenants with minimal downtime.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#contact" class="btn-primary">Get a Property Estimate</a>
+    </div>
+
+    <!-- Right: CTA Card -->
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,151,58,0.2);border-radius:6px;padding:48px 40px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:8px;">Ready to Work Together?</div>
+      <p style="font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:32px;">We work with property managers on an ongoing basis. Tell us about your properties and we'll put together a custom plan and pricing.</p>
+      
+      <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+          <span style="font-size:0.88rem;color:rgba(255,255,255,0.65);">Free on-site estimates for your properties</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+          <span style="font-size:0.88rem;color:rgba(255,255,255,0.65);">Flexible scheduling around tenant move-outs</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+          <span style="font-size:0.88rem;color:rgba(255,255,255,0.65);">Consistent quality across every unit</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></div>
+          <span style="font-size:0.88rem;color:rgba(255,255,255,0.65);">One point of contact for all your locations</span>
+        </div>
+      </div>
+
+      <a href="tel:2538829073" style="display:block;text-align:center;background:var(--gold);color:var(--navy);padding:14px;border-radius:3px;font-weight:600;font-size:0.9rem;text-decoration:none;letter-spacing:0.04em;transition:background 0.2s;">
+        Call (253) 882-9073
+      </a>
+      <a href="/cdn-cgi/l/email-protection#7f0c1d3f1c100d1b10110f1e16110b161118511c1012" style="display:block;text-align:center;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);padding:13px;border-radius:3px;font-size:0.88rem;text-decoration:none;margin-top:10px;transition:border-color 0.2s;">
+        <span class="__cf_email__" data-cfemail="f78495b794988593989987969e99839e9990d994989a">[email&#160;protected]</span>
+      </a>
+    </div>
+
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
@@ -523,22 +605,26 @@ footer { background: #10171f; padding: 40px 60px; display: flex; align-items: ce
   </div>
   <div class="contact-form-wrap">
     <div class="form-title">Request a Free Estimate</div>
-    <div class="form-row">
-      <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"/></div>
-      <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
-    </div>
-    <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@example.com"/></div>
-    <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"/></div>
-    <div class="form-group">
-      <label>Service Needed</label>
-      <select>
-        <option value="">Select a service...</option>
-        <option>Residential Painting</option>
-        <option>Multifamily / Apartment Painting</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="form-group"><label>Tell Us About Your Project</label><textarea placeholder="Square footage, number of rooms, timeline, any special requests..."></textarea></div>
-    <button class="form-submit">Send My Request →</button>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact"/>
+      <p style="display:none;"><input name="bot-field"/></p>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="Jane" required/></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith" required/></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@example.com" required/></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(253) 882-9073"/></div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select name="service">
+          <option value="">Select a service...</option>
+          <option>Residential Painting</option>
+          <option>Multifamily / Apartment Painting</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Square footage, number of rooms, timeline, any special requests..."></textarea></div>
+      <button type="submit" class="form-submit">Send My Request →</button>
+    </form>
   </div>
 </se
