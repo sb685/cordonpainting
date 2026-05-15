@@ -200,10 +200,13 @@
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#services">Services</a></li>
+    <li><a href="residential.html" class="active">Residential</a></li>
+    <li><a href="property-managers.html">Property Managers</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="index.html#testimonials">Reviews</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    <li><a href="#" class="nav-cta" onclick="openPipeline();return false;">Get a Quote</a></li>
   </ul>
   <button class="nav-hamburger" onclick="document.getElementById('navDrawer').classList.add('open')">
     <span></span><span></span><span></span>
@@ -213,8 +216,11 @@
   <button class="nav-drawer-close" onclick="document.getElementById('navDrawer').classList.remove('open')">✕</button>
   <a href="index.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Home</a>
   <a href="index.html#services" onclick="document.getElementById('navDrawer').classList.remove('open')">Services</a>
+  <a href="residential.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Residential</a>
+  <a href="property-managers.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Property Managers</a>
   <a href="about.html" onclick="document.getElementById('navDrawer').classList.remove('open')">About</a>
-  <a href="index.html#gallery" onclick="document.getElementById('navDrawer').classList.remove('open')">Gallery</a>
+  <a href="gallery.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Gallery</a>
+  <a href="blog.html" onclick="document.getElementById('navDrawer').classList.remove('open')">Blog</a>
   <a href="index.html#testimonials" onclick="document.getElementById('navDrawer').classList.remove('open')">Reviews</a>
   <a href="#contact" onclick="document.getElementById('navDrawer').classList.remove('open')" style="color:var(--gold);">Get a Quote</a>
 </div>
@@ -228,7 +234,7 @@
     <h1 class="hero-title">Your Home Deserves <em>Nothing Less.</em></h1>
     <p class="hero-sub">Whether you're refreshing a single room or repainting your entire home inside and out, Cordon Painting delivers clean, professional results you'll be proud of for years.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="#" class="btn-primary" onclick="openPipeline();return false;">Get a Free Estimate</a>
       <a href="#services" class="btn-outline">Our Services</a>
     </div>
   </div>
@@ -319,7 +325,7 @@
     </div>
     <div class="c-detail">
       <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-      <div><div class="c-label">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection#244d4a424b64474b56404b4a54454d4a504d4a430a474b49"><span class="__cf_email__" data-cfemail="cea7a0a8a18eada1bcaaa1a0beafa7a0baa7a0a9e0ada1a3">[email&#160;protected]</span></a></div></div>
+      <div><div class="c-label">Email</div><div class="c-val"><a href="mailto:sb@cordonpainting.com">sb@cordonpainting.com</a></div></div>
     </div>
     <div class="c-detail">
       <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -330,34 +336,173 @@
       <div><div class="c-label">Hours</div><div class="c-val">Mon–Fri 7am–6pm · Sat 8am–4pm</div></div>
     </div>
   </div>
-  <div class="form-wrap">
-    <div class="form-title">Request a Free Estimate</div>
-    <form name="residential-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="residential-contact"/>
-      <p style="display:none;"><input name="bot-field"/></p>
-      <div class="form-row">
-      <div class="form-group"><label>First Name</label><input type="text" name="first-name" placeholder="Jane" required/></div>
-      <div class="form-group"><label>Last Name</label><input type="text" name="last-name" placeholder="Smith" required/></div>
+  <div class="form-wrap" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;">
+    <div>
+      <div class="form-title" style="margin-bottom:12px;">Ready to Get Started?</div>
+      <p style="font-size:0.95rem;color:var(--gray);line-height:1.6;max-width:340px;margin:0 auto;">Tell us about your project and we'll put together a free, no-obligation estimate — usually within a few hours.</p>
     </div>
-    <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@example.com" required/></div>
-    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="(253) 000-0000"/></div>
-    <div class="form-group">
-      <label>Service Needed</label>
-      <select name="service">
-        <option value="">Select a service...</option>
-        <option>Interior Painting</option>
-        <option>Exterior Painting</option>
-        <option>New Construction Painting</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="form-group"><label>Tell Us About Your Project</label><textarea name="message" placeholder="Square footage, number of rooms, timeline, any special requests..."></textarea></div>
-    <button type="submit" class="form-submit">Send My Request →</button>
-    </form>
+    <button onclick="openPipeline()" style="background:var(--gold);color:white;border:none;padding:16px 40px;border-radius:4px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;letter-spacing:0.04em;transition:background 0.2s;" onmouseover="this.style.background='#e8b860'" onmouseout="this.style.background='#c9973a'">
+      Get My Free Estimate →
+    </button>
+    <p style="font-size:0.78rem;color:var(--gray);">Takes 60 seconds · No obligation · We respond same day</p>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cordon <span>Painting</span></div>
-  <p class="footer-copy"
+  <p class="footer-copy">&copy; 2025 Cordon Painting &middot; Licensed &amp; Insured &middot; Greater Puget Sound</p>
+
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</footer>
+<style id="pipelineModalCSS">
+.pipe-modal-overlay{display:none;position:fixed;inset:0;background:rgba(26,35,50,0.88);z-index:9999;overflow-y:auto;padding:60px 20px 40px;}
+.pipe-modal-overlay.open{display:flex;justify-content:center;align-items:flex-start;}
+.pipe-modal-close{position:fixed;top:16px;right:20px;background:rgba(255,255,255,0.18);border:none;color:white;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;z-index:10000;display:none;align-items:center;justify-content:center;transition:background 0.2s;}
+.pipe-modal-overlay.open .pipe-modal-close{display:flex;}
+.pipe-modal-close:hover{background:rgba(255,255,255,0.3);}
+.pipe-modal-overlay .pm-card{background:#f8f5f0;border-radius:8px;padding:52px 52px 36px;max-width:560px;width:100%;position:relative;box-shadow:0 24px 64px rgba(0,0,0,0.5);margin:auto;}
+.pipe-modal-overlay .pm-progress-track{position:absolute;top:0;left:0;right:0;height:4px;background:rgba(201,151,58,0.2);border-radius:8px 8px 0 0;overflow:hidden;}
+.pipe-modal-overlay .pm-progress-fill{height:100%;background:#c9973a;transition:width 0.4s ease;border-radius:8px 8px 0 0;}
+.pipe-modal-overlay .pm-step-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;min-height:22px;}
+.pipe-modal-overlay .pm-back-btn{font-size:0.85rem;color:#6b7280;background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;gap:4px;visibility:hidden;font-family:'DM Sans',sans-serif;transition:color 0.2s;}
+.pipe-modal-overlay .pm-back-btn.visible{visibility:visible;}
+.pipe-modal-overlay .pm-back-btn:hover{color:#1a2332;}
+.pipe-modal-overlay .pm-step-pct{font-size:0.8rem;color:#6b7280;letter-spacing:0.05em;}
+.pipe-modal-overlay .pm-step{display:none;}
+.pipe-modal-overlay .pm-step.active{display:block;}
+.pipe-modal-overlay .pm-step h2{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.65rem);font-weight:700;color:#1a2332;text-align:center;margin-bottom:10px;line-height:1.3;}
+.pipe-modal-overlay .pm-step-sub{font-size:0.88rem;color:#6b7280;text-align:center;margin-bottom:28px;line-height:1.55;}
+.pipe-modal-overlay .pm-tile-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px;}
+.pipe-modal-overlay .pm-tile{border:1.5px solid #e8e8e8;border-radius:6px;padding:20px 12px 16px;text-align:center;cursor:pointer;background:white;transition:all 0.2s;}
+.pipe-modal-overlay .pm-tile:hover{border-color:#c9973a;background:#fffdf8;}
+.pipe-modal-overlay .pm-tile.selected{border-color:#c9973a;background:#fffdf8;box-shadow:0 0 0 1px #c9973a;}
+.pipe-modal-overlay .pm-tile-icon{width:40px;height:40px;margin:0 auto 10px;color:#c9973a;}
+.pipe-modal-overlay .pm-tile-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.pipe-modal-overlay .pm-tile-label{font-size:0.83rem;font-weight:500;color:#1a2332;line-height:1.3;}
+.pipe-modal-overlay .pm-radio-list{display:flex;flex-direction:column;gap:10px;margin-bottom:4px;}
+.pipe-modal-overlay .pm-radio-item{border:1.5px solid #e8e8e8;border-radius:6px;padding:15px 18px;cursor:pointer;background:white;display:flex;align-items:center;justify-content:space-between;transition:all 0.2s;}
+.pipe-modal-overlay .pm-radio-item:hover{border-color:#c9973a;background:#fffdf8;}
+.pipe-modal-overlay .pm-radio-item.selected{border-color:#c9973a;background:#fffdf8;box-shadow:0 0 0 1px #c9973a;}
+.pipe-modal-overlay .pm-radio-title{font-size:0.92rem;font-weight:500;color:#1a2332;margin-bottom:3px;}
+.pipe-modal-overlay .pm-radio-sub{font-size:0.8rem;color:#6b7280;}
+.pipe-modal-overlay .pm-radio-dot{width:18px;height:18px;border-radius:50%;border:2px solid #e8e8e8;flex-shrink:0;transition:all 0.2s;}
+.pipe-modal-overlay .pm-radio-item.selected .pm-radio-dot{border-color:#c9973a;background:#c9973a;}
+.pipe-modal-overlay .pm-field-group{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.pipe-modal-overlay .pm-field-group input{width:100%;padding:14px 16px;border:1.5px solid #e8e8e8;border-radius:6px;font-size:0.95rem;font-family:'DM Sans',sans-serif;color:#1a2332;background:white;transition:border-color 0.2s;outline:none;}
+.pipe-modal-overlay .pm-field-group input:focus{border-color:#c9973a;}
+.pipe-modal-overlay .pm-btn-continue{display:block;width:100%;padding:15px;background:#c9973a;color:white;border:none;border-radius:6px;font-size:1rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s;text-align:center;text-decoration:none;margin-top:6px;}
+.pipe-modal-overlay .pm-btn-continue:hover{background:#b8862e;}
+.pipe-modal-overlay .pm-privacy-note{font-size:0.75rem;color:#6b7280;text-align:center;margin-top:12px;}
+.pipe-modal-overlay .pm-confirm-icon{width:60px;height:60px;background:#c9973a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;}
+.pipe-modal-overlay .pm-confirm-icon svg{width:30px;height:30px;stroke:white;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.pipe-modal-overlay .pm-trust-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px;padding-top:18px;border-top:1px solid #e8e8e8;}
+.pipe-modal-overlay .pm-trust-badge{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:#6b7280;}
+.pipe-modal-overlay .pm-trust-badge svg{width:14px;height:14px;flex-shrink:0;}
+@media(max-width:600px){.pipe-modal-overlay .pm-card{padding:40px 22px 28px;}.pipe-modal-overlay .pm-tile{padding:14px 8px 12px;}}
+@media(max-width:380px){.pipe-modal-overlay .pm-card{padding:36px 16px 24px;}}
+</style>
+<!-- Residential Pipeline Modal -->
+<div class="pipe-modal-overlay" id="pipelineModal">
+  <button class="pipe-modal-close" onclick="closePipeline()">&#x2715;</button>
+  <div class="pm-card">
+    <div class="pm-progress-track"><div class="pm-progress-fill" id="pmProgressBar" style="width:13%"></div></div>
+    <div class="pm-step-nav">
+      <button class="pm-back-btn" id="pmBackBtn" onclick="pmGoBack()">&#8592; Back</button>
+      <span class="pm-step-pct" id="pmStepPct">13%</span>
+    </div>
+    <div class="pm-step active" id="pmStep1">
+      <h2>What service are you looking for?</h2>
+      <p class="pm-step-sub">We specialize in interior, exterior, cabinets, and millwork &mdash; all with premium results.</p>
+      <div class="pm-tile-grid">
+        <div class="pm-tile" onclick="pmSelectTile(this,'service','Interior Painting')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg></div><div class="pm-tile-label">Interior Painting</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'service','Exterior Painting')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="pm-tile-label">Exterior Painting</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'service','Cabinet Painting')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="12" x2="22" y2="12"/><circle cx="12" cy="8.5" r="1"/><circle cx="12" cy="15.5" r="1"/></svg></div><div class="pm-tile-label">Cabinet Painting</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'service','Millwork &amp; Trim')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="3" rx="1"/><rect x="2" y="14" width="20" height="3" rx="1"/><rect x="2" y="4" width="2" height="16" rx="1"/><rect x="20" y="4" width="2" height="16" rx="1"/></svg></div><div class="pm-tile-label">Millwork &amp; Trim</div></div>
+      </div>
+    </div>
+    <div class="pm-step" id="pmStep2">
+      <h2>How large is the area to be painted?</h2>
+      <p class="pm-step-sub">This helps us send the right crew and give you an accurate quote.</p>
+      <div class="pm-radio-list">
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'size','Under 1,000 sq ft')"><div><div class="pm-radio-title">Under 1,000 sq ft</div><div class="pm-radio-sub">Studio, small 1-bed, or single room</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'size','1,000 - 1,800 sq ft')"><div><div class="pm-radio-title">1,000 &ndash; 1,800 sq ft</div><div class="pm-radio-sub">Average 2&ndash;3 bedroom home</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'size','1,800 - 2,500 sq ft')"><div><div class="pm-radio-title">1,800 &ndash; 2,500 sq ft</div><div class="pm-radio-sub">Larger 3&ndash;4 bedroom home</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'size','2,500 - 3,500 sq ft')"><div><div class="pm-radio-title">2,500 &ndash; 3,500 sq ft</div><div class="pm-radio-sub">Large 4+ bedroom home</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'size','3,500+ sq ft')"><div><div class="pm-radio-title">3,500+ sq ft</div><div class="pm-radio-sub">Estate, large custom home, or commercial space</div></div><div class="pm-radio-dot"></div></div>
+      </div>
+    </div>
+    <div class="pm-step" id="pmStep3">
+      <h2>What's the current surface condition?</h2>
+      <p class="pm-step-sub">This helps us give you the most accurate estimate &mdash; no surprises.</p>
+      <div class="pm-radio-list">
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'condition','Ready to Paint')"><div><div class="pm-radio-title">Ready to Paint</div><div class="pm-radio-sub">Clean surfaces, no repairs needed</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'condition','Minor Prep Needed')"><div><div class="pm-radio-title">Minor Prep Needed</div><div class="pm-radio-sub">Light sanding, small holes or cracks</div></div><div class="pm-radio-dot"></div></div>
+        <div class="pm-radio-item" onclick="pmSelectRadio(this,'condition','Major Prep Needed')"><div><div class="pm-radio-title">Major Prep Needed</div><div class="pm-radio-sub">Peeling, significant damage, or bare wood</div></div><div class="pm-radio-dot"></div></div>
+      </div>
+    </div>
+    <div class="pm-step" id="pmStep4">
+      <h2>When are you hoping to get started?</h2>
+      <p class="pm-step-sub">We have openings available &mdash; the sooner we know, the sooner we can schedule.</p>
+      <div class="pm-tile-grid">
+        <div class="pm-tile" onclick="pmSelectTile(this,'timeline','ASAP')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></div><div class="pm-tile-label">ASAP</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'timeline','Within 2 Weeks')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="pm-tile-label">Within 2 Weeks</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'timeline','Within a Month')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="pm-tile-label">Within a Month</div></div>
+        <div class="pm-tile" onclick="pmSelectTile(this,'timeline','Just Planning')"><div class="pm-tile-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div class="pm-tile-label">Just Planning</div></div>
+      </div>
+    </div>
+    <div class="pm-step" id="pmStep5">
+      <h2>What's your zip code?</h2>
+      <p class="pm-step-sub">We serve the greater Seattle, WA area and surrounding neighborhoods.</p>
+      <div class="pm-field-group"><input type="text" id="pmZipCode" placeholder="e.g. 98101" maxlength="5" inputmode="numeric"/></div>
+      <button class="pm-btn-continue" onclick="pmNextFromInput('pmZipCode','zip')">Continue</button>
+    </div>
+    <div class="pm-step" id="pmStep6">
+      <h2>Who should we prepare this estimate for?</h2>
+      <p class="pm-step-sub">Your personalized free estimate is almost ready.</p>
+      <div class="pm-field-group"><input type="text" id="pmFirstName" placeholder="First Name"/><input type="text" id="pmLastName" placeholder="Last Name"/></div>
+      <button class="pm-btn-continue" onclick="pmNextFromName()">Continue</button>
+    </div>
+    <div class="pm-step" id="pmStep7">
+      <h2>Where should we send your estimate?</h2>
+      <p class="pm-step-sub">We typically respond within a few hours. No spam. No obligation.</p>
+      <div class="pm-field-group"><input type="tel" id="pmPhone" placeholder="Phone Number"/><input type="email" id="pmEmail" placeholder="Email Address"/></div>
+      <button class="pm-btn-continue" onclick="pmSubmit()">Get My Free Estimate</button>
+      <p class="pm-privacy-note">100% free, no obligation. We respect your privacy.</p>
+    </div>
+    <div class="pm-step" id="pmStep8">
+      <div class="pm-confirm-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h2>We'll be in touch soon!</h2>
+      <p class="pm-step-sub">Expect a call or text within a few hours. We'll review your project details and send over a free, no-obligation estimate.</p>
+      <button class="pm-btn-continue" onclick="closePipeline()" style="margin-top:20px;">Close</button>
+    </div>
+    <div class="pm-trust-badges" id="pmTrustBadges">
+      <span class="pm-trust-badge"><svg viewBox="0 0 24 24" fill="#c9973a" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5-Star Rated on Google</span>
+      <span class="pm-trust-badge"><svg viewBox="0 0 24 24" stroke="#c9973a" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Free Estimates, No Obligation</span>
+      <span class="pm-trust-badge"><svg viewBox="0 0 24 24" stroke="#c9973a" fill="none" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Family-Owned &amp; Operated</span>
+    </div>
+  </div>
+</div>
+<script>
+const FORM_ENDPOINT = '';
+let pmStep = 1;
+const pmAnswers = { type: 'Residential' };
+const pmProgress = { 1:13, 2:25, 3:38, 4:51, 5:64, 6:77, 7:90, 8:100 };
+function openPipeline() { pmStep=1; Object.keys(pmAnswers).forEach(function(k){if(k!=='type')delete pmAnswers[k];}); pmShowStep(1); document.getElementById('pipelineModal').classList.add('open'); document.body.style.overflow='hidden'; }
+function closePipeline() { document.getElementById('pipelineModal').classList.remove('open'); document.body.style.overflow=''; }
+function pmShowStep(n) { document.querySelectorAll('#pipelineModal .pm-step').forEach(function(s){s.classList.remove('active');}); document.getElementById('pmStep'+n).classList.add('active'); document.getElementById('pmProgressBar').style.width=pmProgress[n]+'%'; document.getElementById('pmStepPct').textContent=pmProgress[n]+'%'; document.getElementById('pmBackBtn').classList.toggle('visible',n>1&&n<8); document.getElementById('pmTrustBadges').style.display=n===8?'none':''; document.getElementById('pipelineModal').scrollTo({top:0,behavior:'smooth'}); }
+function pmSelectTile(el,key,value) { el.closest('.pm-tile-grid').querySelectorAll('.pm-tile').forEach(function(t){t.classList.remove('selected');}); el.classList.add('selected'); pmAnswers[key]=value; setTimeout(function(){pmStep++;pmShowStep(pmStep);},280); }
+function pmSelectRadio(el,key,value) { el.closest('.pm-radio-list').querySelectorAll('.pm-radio-item').forEach(function(r){r.classList.remove('selected');}); el.classList.add('selected'); pmAnswers[key]=value; setTimeout(function(){pmStep++;pmShowStep(pmStep);},280); }
+function pmNextFromInput(inputId,key) { var val=document.getElementById(inputId).value.trim(); if(!val){document.getElementById(inputId).focus();return;} pmAnswers[key]=val; pmStep++;pmShowStep(pmStep); }
+function pmNextFromName() { var fn=document.getElementById('pmFirstName').value.trim(); if(!fn){document.getElementById('pmFirstName').focus();return;} pmAnswers.firstName=fn; pmAnswers.lastName=document.getElementById('pmLastName').value.trim(); pmStep++;pmShowStep(pmStep); }
+function pmSubmit() { var phone=document.getElementById('pmPhone').value.trim(); var email=document.getElementById('pmEmail').value.trim(); if(!phone&&!email){document.getElementById('pmPhone').focus();return;} pmAnswers.phone=phone; pmAnswers.email=email; pmAnswers.submittedAt=new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'}); pmAnswers.source=window.location.href; pmStep=8;pmShowStep(8); if(FORM_ENDPOINT){fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(pmAnswers)}).catch(function(e){console.warn(e);});} }
+function pmGoBack() { if(pmStep>1&&pmStep<8){pmStep--;pmShowStep(pmStep);} }
+document.getElementById('pipelineModal').addEventListener('click',function(e){if(e.target===this)closePipeline();});
+</script>
+
+</body>
+</html>
