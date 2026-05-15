@@ -964,12 +964,8 @@ function mSubmit() {
   mStep = 9; mShowStep(9);
   // POST to Google Sheet in the background
   if (FORM_ENDPOINT) {
-    fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(mAnswers)
-    }).catch(function(err){ console.warn('Form submit error:', err); });
+    var _p = new URLSearchParams(mAnswers).toString();
+    fetch(FORM_ENDPOINT + '?' + _p, {method:'GET',mode:'no-cors'}).catch(function(err){ console.warn('Form submit error:', err); });
   }
 }
 function mGoBack() { if(mStep>1&&mStep<9){mStep--;mShowStep(mStep);} }
