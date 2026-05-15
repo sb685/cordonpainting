@@ -255,11 +255,8 @@ function submitForm() {
   answers.source = window.location.href;
   currentStep = 7; showStep(7);
   if (FORM_ENDPOINT) {
-    fetch(FORM_ENDPOINT, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(answers)
-    }).catch(function(err){ console.warn('Form submit error:', err); });
+    var _p = new URLSearchParams(answers).toString();
+    fetch(FORM_ENDPOINT + '?' + _p, {method:'GET',mode:'no-cors'}).catch(function(err){ console.warn(err); });
   }
 }
 
